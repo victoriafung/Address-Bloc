@@ -24,8 +24,8 @@ require_relative 'entry'
         if name == entry.name && phone_number == entry.phone_number && email == entry.email
           delete_entry = entry
         end
-        entries.delete(delete_entry)
-      end    
+      end
+      entries.delete(delete_entry)
     end
 
   end
