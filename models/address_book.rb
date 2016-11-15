@@ -50,4 +50,8 @@ require "csv"
 
     end
 
+    def demolish
+      @entries = []
+    end
+
   end
