@@ -50,4 +50,13 @@ require "csv"
 
     end
 
+    def iterative_search(name)
+      entries.each do |search|
+        if search.name == name
+          return search
+        end
+      end
+      return nil
+    end
+
   end
