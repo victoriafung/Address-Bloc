@@ -44,11 +44,11 @@ RSpec.describe AddressBook do
        book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
        expect(book.entries.size).to eq(2)
 
-       book.remove_entry(name, phone_number, email)
+       book.remove_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
        expect(book.entries.size).to eq(1)
-      #  expect(book.entries.name).to eq('Tom Abbott')
-      #  expect(book.entries.phone_number).to eq('123.456.7891')
-      #  expect(book.entries.email).to eq('toma@abbott.com')
+       expect(book.entries.first.name).to eq('Tom Abbott')
+       expect(book.entries.first.phone_number).to eq('123.456.7891')
+       expect(book.entries.first.email).to eq('toma@abbott.com')
      end
    end
 
